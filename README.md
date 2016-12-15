@@ -8,11 +8,11 @@
 
 It's a little bit fiddly, but not too bad.
 
-You'll need a copy of the [ANTLR 4 Javascript runtime](https://github.com/antlr/antlr4/blob/master/doc/javascript-target.md) at `src/antlr/`. Beyond that, assuming you have [node.js](https://nodejs.org/en/) and [CoffeeScript](http://coffeescript.org) installed, and have run `npm update`, things should just work. Maybe.
+You'll need a copy of the [ANTLR 4 Javascript runtime](https://github.com/antlr/antlr4/blob/master/doc/javascript-target.md) at `src/parser/antlr4/`. Beyond that, assuming you have [node.js](https://nodejs.org/en/) and [CoffeeScript](http://coffeescript.org) installed, and have run `npm update`, things should just work. Maybe.
 
 Run `npm start` for a development server.
 
-To build, you'll need to copy `style/favicon.ico` and  and `style/juggling-graphics.png` to the `build` folder, then `npm run build`. In addition to the app, this generates `.htaccess` and `cache.manifest` files which probably won't be appropriate for your setup.
+To build, you'll need to copy `src/style/favicon.ico` and  and `src/style/juggling-graphics.png` to the `build` folder, then `npm run build`. In addition to the app, this generates `.htaccess` and `cache.manifest` files which probably won't be appropriate for your setup.
 
 ## credits
 

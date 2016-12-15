@@ -11,7 +11,7 @@ siteswaps, including synchronous and multiplex throws.</p>
 </p>
 
 <p>juggling • graphics is open source. If you're into that kind of thing, you can
-see it <a href="https://github.com/wgregp/juggling-graphics">on GitHub</a>.<p>
+ <a href="https://github.com/wgregp/juggling-graphics">see the code on GitHub</a>.<p>
 
 <p>Design and programming by <a href="https://last3.in">Greg Phillips</a>. 
 Linear and circular wave diagrams based on an idea by 
