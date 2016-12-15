@@ -47,3 +47,4 @@ jspm_packages
 *.tgz
 build
 src/parser/antlr4
+publish.sh
