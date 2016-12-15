@@ -6,9 +6,12 @@ which represent throw and catch order in juggling patterns.
 You can enter most common notations for two-handed 
 siteswaps, including synchronous and multiplex throws.</p>
 
-<p>You don't even need a network connection, just add it to your home screen 
+<p>You don't need a network connection, just save a link or add it to your home screen 
 (<a href="http://www.howtogeek.com/196087/how-to-add-websites-to-the-home-screen-on-any-smartphone-or-tablet/">instructions</a>).
 </p>
+
+<p>juggling • graphics is open source. If you're into that kind of thing, you can
+see it <a href="https://github.com/wgregp/juggling-graphics">on GitHub</a>.<p>
 
 <p>Design and programming by <a href="https://last3.in">Greg Phillips</a>. 
 Linear and circular wave diagrams based on an idea by 

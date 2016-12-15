@@ -48,3 +48,4 @@ jspm_packages
 build
 src/parser/antlr4
 publish.sh
+files.js
