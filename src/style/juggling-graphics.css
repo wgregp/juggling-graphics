@@ -1,0 +1,174 @@
+body {
+  background-color: white;
+  color: black;
+  font-family: sans-serif;
+}
+
+canvas {
+  margin-top: 10px;
+  display: block;
+}
+
+#root {
+  padding-right: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: brown;
+}
+
+#about {
+  border: 1px solid grey;
+  background-color: #f0f0f0;
+  width: 75%;
+  margin: 3ex auto 3ex auto;
+  padding: 0 1em 1.5ex 1em;
+}
+
+#about h1 {
+  font-size: 144%;
+  font-weight: normal;
+  text-align: center;
+}
+
+.privacy {
+  font-size: 70%;
+  font-style: italic;
+  color: grey;
+  text-align: center;
+}
+
+.siteswap {
+  margin: 0 0 10px 0;
+  font-size: 16pt;
+  width: 100%;
+}
+
+.colorpicker {
+  margin-top: 10px;
+  margin-right: 30px;
+  min-width: 290px;
+  min-height: 150px;
+}
+
+.orbitcolors {
+  border-spacing: 5px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.orbitcolors tr {
+  height: 32px;
+}
+
+.orbitcolors .text {
+  border: 1px solid white;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.orbitcolors tr.selected .text {
+  background-color: #ffffc3;
+  border: 1px solid grey;
+}
+
+.orbitcolors .text {
+  font-size: 16pt;
+  padding: 0 1ex 0 1ex;
+}
+
+.orbitcolors td.selected {
+    background-color: yellow;
+}
+
+td.color {
+  width: 30px;
+  height: 30px;
+  border: 1px solid grey;
+  border-radius: 20px;
+}
+
+.palette {
+  margin-left: 10px;
+  background-color: #ffffff;
+  display: inline-block;
+  vertical-align: top;
+  border-spacing: 5px;
+}
+
+.palettecolor {
+  height: 20px;
+  width: 30px;
+  border: 1px solid grey;
+  border-radius: 20px;
+}
+
+.buttonBar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  width: 32px;
+  height: 32px;
+  margin: 0 3px 10px 0;
+  padding: 2px;
+  border: 2px solid black;
+  border-radius: 20px;
+}
+
+.button img {
+  width: 32px;
+  height: 32px;  
+}
+
+.spacer {
+  display: inline-block;
+  text-decoration: none;
+  width: 8px;
+  height: 32px;
+  margin: 0;  
+}
+
+.nerdview {
+  font-family: "Panic Sans", "Monaco", "Andale Mono", monospace;
+  font-size: 0.85em;
+  overflow-y: scroll;
+}
+
+.nerdview p {
+  margin: 0.25ex;
+}
+
+.displaybox, .nerdview, .propertysliders {
+  margin-top: 10px;
+}
+
+.propertysliders input {
+  width: 20em;
+}
+
+.row {
+  margin: 0.5ex 0 0.5ex 0;
+  display:table-row; 
+  vertical-align:middle
+}
+
+.col {
+  display:table-cell; 
+  vertical-align: middle;
+  padding-right: 1ex;
+}
+
+.col:nth-of-type(2) {
+  text-align:right; 
+  width: 3em;
+}
+
+.error {
+  color: red;
+}

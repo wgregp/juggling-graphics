@@ -1,0 +1,36 @@
+{
+  "name": "juggling-graphics",
+  "version": "0.1.0",
+  "description": "a siteswap illustrator",
+  "main": "juggling-graphics.coffee",
+  "scripts": {
+    "prestart": "coffee -c ./src/files.coffee",
+    "start": "hjs-dev-server",
+    "prebuild": "coffee -c ./src/files.coffee",
+    "build":  "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/wgregphillips/jvis.git"
+  },
+  "keywords": [
+    "juggling",
+    "visualizer",
+    "waves"
+  ],
+  "author": "Greg Phillips",
+  "license": "BSD-2-Clause",
+  "homepage": "https://juggling.graphics",
+  "devDependencies": {
+    "coffee-loader": "^0.7.2",
+    "coffee-script": "^1.11.1",
+    "css-loader": "^0.25.0",
+    "file-loader": "^0.9.0",
+    "postcss-loader": "^1.1.0",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7"
+  },
+  "dependencies": {
+    "hjs-webpack": "^8.4.1"
+  }
+}
