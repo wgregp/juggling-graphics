@@ -1,21 +1,23 @@
-index = (context, config) ->  """<!doctype html>
-<html manifest="/cache.manifest">
-<head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes"/>
-<meta name="apple-mobile-web-app-title" content="j•graphics">
-<link rel="apple-touch-icon" href="/juggling-graphics.png">
-<title>#{config.title}</title>
-<link rel="stylesheet" href="#{config.publicPath}#{context.css}"/>
-</head>
-<body>
-<div id="root">
-</div>
-<script src="#{config.publicPath}#{context.main}">
-</script>
-</body>
-</html>
-"""
+index = (context, config) ->  
+	htmltag = if context.isDev then "<html>" else '<html manifest="/cache.manifest">'
+	"""<!doctype html>
+	#{htmltag}
+	<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes"/>
+	<meta name="apple-mobile-web-app-title" content="j•graphics">
+	<link rel="apple-touch-icon" href="/juggling-graphics.png">
+	<title>#{config.title}</title>
+	<link rel="stylesheet" href="#{config.publicPath}#{context.css}"/>
+	</head>
+	<body>
+	<div id="root">
+	</div>
+	<script src="#{config.publicPath}#{context.main}">
+	</script>
+	</body>
+	</html>
+	"""
 
 manifest = (context) -> """CACHE MANIFEST
 #{context.css}

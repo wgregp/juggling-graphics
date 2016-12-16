@@ -12,10 +12,11 @@ module.exports = getConfig({
         'title': 'juggling•graphics ✾ a siteswap illustrator',
         'publicPath': '/'
     }
-    return {
-      'index.html': files.index(context, config),
-      'cache.manifest': files.manifest(context),
-      '.htaccess': files.htaccess(context)
+    var generated = {'index.html': files.index(context, config)};
+    if (!context.isDev) {
+        generated['cache.manifest'] = files.manifest(context);
+        generated['.htaccess'] = files.htaccess(context);
     }
+    return generated;
   }
 })
