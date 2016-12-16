@@ -12,7 +12,7 @@ You'll need a copy of the [ANTLR 4 Javascript runtime](https://github.com/antlr/
 
 Run `npm start` for a development server.
 
-To build, you'll need to copy `src/style/favicon.ico` and  and `src/style/juggling-graphics.png` to the `build` folder, then `npm run build`. In addition to the app, this generates `.htaccess` and `cache.manifest` files which probably won't be appropriate for your setup.
+To build, you'll need to copy `src/style/favicon.ico` and  and `src/style/juggling-graphics.png` to the `/build` folder, then `npm run build`. In addition to the app, this generates `.htaccess` and `cache.manifest` files which probably won't be appropriate for your setup.
 
 ## credits
 

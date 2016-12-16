@@ -157,10 +157,13 @@ class CircularWaves extends Visualization
     while waves.length > 0
       wave = @nextView waves 
       wave.curve ctx
-      if wave.drawnTo > wave.end
+      if wave.drawnTo >= wave.end
         toFinish.push wave
         waves.splice waves.indexOf(wave), 1
-    wave.finishBraid(ctx) for wave in toFinish 
+    while toFinish.length > 0
+      wave = @nextView toFinish
+      wave.finishBraid ctx
+      toFinish.splice toFinish.indexOf(wave), 1
     @animationOffset = 0
     @render()
 
