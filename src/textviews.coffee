@@ -1,6 +1,6 @@
 aboutText = """<h1>juggling • graphics<br/>✾ a siteswap illustrator ✾</h1>
 
-<p>xx juggling • graphics draws pictures of 
+<p>juggling • graphics draws pictures of 
 <a href="https://en.wikipedia.org/wiki/Siteswap">siteswaps</a>,
 which represent throw and catch order in juggling patterns. 
 You can enter most common notations for two-handed 
