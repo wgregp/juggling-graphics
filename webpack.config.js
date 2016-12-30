@@ -1,12 +1,21 @@
 var getConfig = require('hjs-webpack')
+var webpack = require('webpack')
 var files = require('./src/files.js')
+
 
 module.exports = getConfig({
   in: 'src/juggling-graphics.coffee',
   out: 'build',
   clearBeforeBuild: '!(juggling-graphics.png|favicon.ico)',
+  
+  package: { name: 'juggling-graphics', version: '0.2.0' },
 
-  package: { name: 'juggling-graphics', version: '0.1.0' },
+  plugins: [
+    new webpack.ProvidePlugin({
+        'THREE': 'three'
+    })
+  ],
+
   html: function (context) {
     var config = {
         'title': 'juggling•graphics ✾ a siteswap illustrator',

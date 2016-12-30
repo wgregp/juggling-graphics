@@ -9,6 +9,10 @@ class Canvas
 
   circular: -> @setDisplay CircularWaves
 
+  goDormant: -> @stopAnimation()
+
+  wakeUp: -> @update()
+
   setDisplay: (klass) ->
     wasAnimating = @display?.animating
     @stopAnimation()   

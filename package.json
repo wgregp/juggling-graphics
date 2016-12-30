@@ -1,13 +1,13 @@
 {
   "name": "juggling-graphics",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "a siteswap illustrator",
   "main": "juggling-graphics.coffee",
   "scripts": {
     "prestart": "coffee -c ./src/files.coffee",
     "start": "hjs-dev-server",
     "prebuild": "coffee -c ./src/files.coffee",
-    "build":  "webpack"
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -31,6 +31,7 @@
     "url-loader": "^0.5.7"
   },
   "dependencies": {
-    "hjs-webpack": "^8.4.1"
+    "hjs-webpack": "^8.4.1",
+    "three": "^0.83.0"
   }
 }

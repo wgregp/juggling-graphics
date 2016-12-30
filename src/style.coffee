@@ -18,10 +18,10 @@ LOOK_PROPERTIES =
   sliders: [
     { name: 'cycles', min: 1, max: 10, step: 1, default: 1, label: 'Cycles'}
     { name: 'hands', min: 1, max: 6, step: 1, default: 2, label: 'Hands'}
-    { name: 'dwell', min: 0, max: 1, step: 0.05, default: 0.65, label: 'Dwell ratio'}
-    { name: 'gravity', min: 1, max: 3, step: 0.1, default: 2, label: 'Gravity'}
-    { name: 'dx', min: 1 , max: 100, step: 1, default: 30, label: 'Spacing'}
-    { name: 'dy', min: 1, max: 100, step: 1, default: 5, label: 'Peaks'}
+    { name: 'dwell', min: 0, max: 1, step: 0.05, default: 0, label: 'Dwell ratio'}
+    { name: 'gravity', min: 1, max: 3, step: 0.1, default: 1, label: 'Gravity'}
+    { name: 'dx', min: 1 , max: 100, step: 1, default: 20, label: 'Spacing'}
+    { name: 'dy', min: 1, max: 100, step: 1, default: 10, label: 'Peaks'}
     { name: 'smoothing', min: 0, max: 1, step: 0.1, default: 0.5, label: 'Smoothing'}
     { name: 'lineWidth', min: 1, max: 30, step: 1, default: 4, label: 'Line width'}
     { name: 'borderWidth', min: 0, max: 15, step: 0.5, default: 2, label: 'Gap width'}

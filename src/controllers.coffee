@@ -132,7 +132,7 @@ class SiteswapInput
     @attachListeners()
 
   node: -> @siteswapField
-    
+
   createInputField: ->
     @siteswapField = document.createElement 'input'
     @siteswapField.id = "#{@parentName}-siteswap"
@@ -140,11 +140,13 @@ class SiteswapInput
     @siteswapField.classList.add 'siteswap'
     
   attachListeners: ->
-    @siteswapField.addEventListener('input', @recomputePattern)
+    @siteswapField.addEventListener 'input', @recomputePattern
     
   recomputePattern: =>
+    @siteswapField.classList.remove 'invalid-siteswap', 'valid-siteswap'
     @pattern.newSiteswap @siteswapField.value
-
+    if @siteswapField.value.length > 0
+      @siteswapField.classList.add if @pattern.valid then 'valid-siteswap' else 'invalid-siteswap'
 
 class Button
 

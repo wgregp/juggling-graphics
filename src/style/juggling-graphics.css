@@ -45,6 +45,15 @@ a {
   width: 100%;
 }
 
+.invalid-siteswap {
+  color: #BE3031;
+  background-color: #FEE9EA;
+}
+
+.valid-siteswap {
+  /*background-color: #E7FFD1;*/
+}
+
 .colorpicker {
   margin-top: 10px;
   margin-right: 30px;

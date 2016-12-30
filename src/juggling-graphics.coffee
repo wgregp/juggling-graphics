@@ -6,17 +6,22 @@ spacer = (bar) ->
   bar.appendChild s
 
 Pattern = (require './pattern.coffee').Pattern
-canvasviews = require './canvasviews.coffee'
+views2D = require './views2D.coffee'
+views3D = require './views3D.coffee'
 textviews = require './textviews.coffee'
 style = require './style.coffee'
 controllers = require './controllers.coffee'
+toolbars = require './toolbars.coffee'
 
 ROOT = 'root'
 pattern = new Pattern
 siteswap = new controllers.SiteswapInput ROOT, pattern  
 look = new style.Look()
 colors = new controllers.OrbitColorPicker ROOT, pattern, look
-display = new canvasviews.Canvas ROOT, pattern, look
+
+display2D = new views2D.Canvas ROOT, pattern, look
+display3D = new views3D.Canvas3D ROOT, pattern, look
+
 sliders = new controllers.PropertySliders ROOT, look, style.LOOK_PROPERTIES.sliders
 about = new textviews.AboutView()
 
@@ -24,37 +29,14 @@ rootNode = document.getElementById ROOT
 
 buttonBar = document.createElement 'div'
 buttonBar.classList.add 'buttonBar'
-linearButton = new controllers.Button require('./style/linear.png'), => 
-  display.linear()
-buttonBar.appendChild linearButton.node()
-circularButton = new controllers.Button require('./style/circular.png'), => 
-  display.circular()
-buttonBar.appendChild circularButton.node()
-spacer buttonBar
-sliderButton = new controllers.Button require('./style/sliders.png'), =>
-  sliders.toggle()
-buttonBar.appendChild sliderButton.node()
-colorButton = new controllers.Button require('./style/colours.png'), => 
-  colors.toggle()
-buttonBar.appendChild colorButton.node()
-spacer buttonBar
-play = =>
-  display.startAnimation()
-pause = =>
-  display.stopAnimation()
-playPauseButton = new controllers.TogglingButton require('./style/play.png'), play,
-  require('./style/pause.png'), pause 
-buttonBar.appendChild playPauseButton.node()
-spacer buttonBar
-downloadPNGButton = new controllers.Button require('./style/down-png.png'), =>
-  return if display.node().width is 0
-  downloadPNGButton.node().href = display.node().toDataURL()
-  downloadPNGButton.node().download = "#{pattern.ss}.png" 
-buttonBar.appendChild downloadPNGButton.node()
-spacer buttonBar
-aboutButton = new controllers.Button require('./style/about.png'), =>
-  about.toggle()
-buttonBar.appendChild aboutButton.node()
+
+toolbar2D = new toolbars.Toolbar2D buttonBar, pattern, display2D, sliders, colors, about, display3D
+toolbar2D.activate()
+
+toolbar3D = new toolbars.Toolbar3D buttonBar, pattern, display3D, sliders, colors, about, display2D
+
+toolbar2D.otherToolbar = toolbar3D
+toolbar3D.otherToolbar = toolbar2D
 
 rootNode.appendChild siteswap.node()
 rootNode.appendChild buttonBar
@@ -69,13 +51,14 @@ sliders.hide()
 sliders.connectTo look, style.LOOK_PROPERTIES.sliders
 rootNode.appendChild colors.node()
 colors.hide()
-rootNode.appendChild display.node()
+rootNode.appendChild display2D.node()
+rootNode.appendChild display3D.node()
 
-pattern.addListener display
+pattern.addListener display2D
 pattern.addListener colors
-look.addListener display
+look.addListener display2D
 look.addListener colors
 
-display.update()
+display2D.update()
 siteswap.node().focus()
 
